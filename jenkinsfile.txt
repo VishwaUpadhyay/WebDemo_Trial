@@ -6,7 +6,7 @@ pipeline {
 			echo 'First Stage'
 		}
 		
-		stage ('Stage 2') {
+		stage ('Stage 21') {
 			echo 'Second Stage'
 		}
 	}
