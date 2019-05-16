@@ -2,10 +2,18 @@ pipeline {
     agent any
 	
 	stages {
+		
 		stage ('Stage 1') {
 			steps {
-				sh 'pwd'
-				sh 'python demoapp/server.py'
+				echo 'Cloning is complete'
+			}
+			
+		}
+		stage ('Stage 2') {
+			steps {
+				timeout(time: 20, unit: 'SECONDS'){
+					sh 'python demoapp/server.py'
+				}
 			}
 			
 		}
