@@ -5,8 +5,7 @@ pipeline {
 		stage ('Stage 1') {
 			steps {
 				sh 'pwd'
-				sh 'cd demoapp'
-				sh 'python server.py'
+				sh 'python demoapp/server.py'
 			}
 			
 		}
