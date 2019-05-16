@@ -4,14 +4,15 @@ pipeline {
 	stages {
 		stage ('Stage 1') {
 			steps {
-				echo pwd
+				cd demoapp
+				python server.py
 			}
 			
 		}
 		
 		stage ('Stage 21') {
 			steps {
-				echo 'First Stage'
+				echo 'Second Stage'
 			}
 		}
 	}
