@@ -12,7 +12,7 @@ pipeline {
 		stage ('Stage 2') {
 			steps {
 				timeout(time: 20, unit: 'SECONDS'){
-					sh 'python demoapp/server.py'
+					sh 'python demoapp\server.py'
 				}
 			}
 			
