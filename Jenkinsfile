@@ -3,23 +3,18 @@ pipeline {
 	
 	stages {
 		
-		stage ('Stage 1') {
+		stage ('Stage 1 - Deploy the server') {
 			steps {
-				echo 'Cloning is complete'
+				echo 'Starting the Demo Server'
+				bat 'START "" python server.py'
 			}
 			
 		}
-		stage ('Stage 2') {
+		stage ('Stage 2 - Execute the tests') {
 			steps {
-				 bat 'python demoapp/server.py'
+				 bat 'robot login_tests'
 			}
 			
-		}
-		
-		stage ('Stage 21') {
-			steps {
-				echo 'Second Stage'
-			}
 		}
 	}
 }
